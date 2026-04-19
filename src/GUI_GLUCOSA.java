@@ -157,7 +157,11 @@ public class GUI_GLUCOSA extends JFrame {
 		btn_historial.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btn_historial.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				manejo.recorrerLista(modelo);
+				if (manejo.estaVacia()) {
+		            JOptionPane.showMessageDialog(null, "AUN NO HAY REGISTROS");
+		        } else {
+		            manejo.recorrerLista(modelo);
+		        }
 			}
 		});
 		toolBar.add(btn_historial);

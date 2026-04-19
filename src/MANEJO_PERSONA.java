@@ -96,6 +96,9 @@ public class MANEJO_PERSONA {
         }
     }
     
+    public boolean estaVacia() {
+        return primero == null;
+    }
     
     
     
