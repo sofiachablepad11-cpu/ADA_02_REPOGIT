@@ -28,7 +28,7 @@ public class GUI_GLUCOSA extends JFrame {
 	private JPanel contentPane;
 	private JTextField textVALOR;
 	private JTextField textNOMBRE;
-	
+	private JList list;
 	private JComboBox comboBox_DIA;
     private JComboBox comboBox_MES;
     private JComboBox comboBox_AÑO;
@@ -168,7 +168,7 @@ public class GUI_GLUCOSA extends JFrame {
 		lbl_historial.setBounds(266, 75, 312, 12);
 		contentPane.add(lbl_historial);
 		
-		JList list = new JList();
+		list = new JList(modelo);
 		list.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
 		list.setForeground(new Color(0, 0, 0));
 		list.setBounds(266, 107, 312, 174);
