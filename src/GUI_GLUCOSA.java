@@ -16,6 +16,9 @@ import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.awt.event.ActionEvent;
+import javax.swing.JToolBar;
+import java.awt.Color;
+import javax.swing.border.LineBorder;
 
 public class GUI_GLUCOSA extends JFrame {
 
@@ -141,6 +144,32 @@ public class GUI_GLUCOSA extends JFrame {
 		});
 		btn_agregar.setBounds(10, 291, 242, 20);
 		contentPane.add(btn_agregar);
+		
+		JToolBar toolBar = new JToolBar();
+		toolBar.setBackground(new Color(192, 192, 192));
+		toolBar.setForeground(new Color(128, 128, 192));
+		toolBar.setBounds(5, 10, 130, 21);
+		contentPane.add(toolBar);
+		
+		JButton btn_historial = new JButton("VER HISTORIAL");
+		btn_historial.setFont(new Font("Tahoma", Font.BOLD, 10));
+		btn_historial.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		toolBar.add(btn_historial);
+		
+		JLabel lbl_historial = new JLabel("HISTORIAL");
+		lbl_historial.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl_historial.setFont(new Font("Tahoma", Font.BOLD, 10));
+		lbl_historial.setBounds(288, 75, 279, 12);
+		contentPane.add(lbl_historial);
+		
+		JList list = new JList();
+		list.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		list.setForeground(new Color(0, 0, 0));
+		list.setBounds(288, 107, 279, 174);
+		contentPane.add(list);
 
 	}
 }
