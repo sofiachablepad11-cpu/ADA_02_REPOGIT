@@ -13,6 +13,8 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListModel;
+
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.awt.event.ActionEvent;
@@ -33,7 +35,7 @@ public class GUI_GLUCOSA extends JFrame {
     LocalDate hoy = LocalDate.now();
 	
 	
-	
+    private DefaultListModel modelo = new DefaultListModel();
 	private MANEJO_PERSONA manejo = new MANEJO_PERSONA();
 
 	/**
@@ -155,6 +157,7 @@ public class GUI_GLUCOSA extends JFrame {
 		btn_historial.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btn_historial.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				manejo.recorrerLista(modelo);
 			}
 		});
 		toolBar.add(btn_historial);
@@ -162,13 +165,13 @@ public class GUI_GLUCOSA extends JFrame {
 		JLabel lbl_historial = new JLabel("HISTORIAL");
 		lbl_historial.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_historial.setFont(new Font("Tahoma", Font.BOLD, 10));
-		lbl_historial.setBounds(288, 75, 279, 12);
+		lbl_historial.setBounds(266, 75, 312, 12);
 		contentPane.add(lbl_historial);
 		
 		JList list = new JList();
 		list.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
 		list.setForeground(new Color(0, 0, 0));
-		list.setBounds(288, 107, 279, 174);
+		list.setBounds(266, 107, 312, 174);
 		contentPane.add(list);
 
 	}
