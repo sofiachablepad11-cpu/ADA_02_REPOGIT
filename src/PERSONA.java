@@ -75,6 +75,11 @@ public class PERSONA {
 	public void setAño(int año) {
 		this.año = año;
 	}
+
+	@Override
+	public String toString() {
+		return "NOMBRE: " + nombre + ", VALOR: " + valor + ", FECHA: " + dia + "/" + mes + "/" + año;
+	}
 	
 	
 	

@@ -1,3 +1,5 @@
+import javax.swing.DefaultListModel;
+
 public class MANEJO_PERSONA {
 
     private PERSONA primero, ultimo = null;
@@ -84,7 +86,15 @@ public class MANEJO_PERSONA {
         return true;
     }
     
-    
+    public void recorrerLista(DefaultListModel modelo) {
+        modelo.clear();
+        PERSONA aux = primero;
+
+        while (aux != null) {
+            modelo.addElement(aux.toString());
+            aux = aux.getSiguiente();
+        }
+    }
     
     
     
