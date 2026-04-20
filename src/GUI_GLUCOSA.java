@@ -185,6 +185,18 @@ public class GUI_GLUCOSA extends JFrame {
 		textFieldBuscar.setColumns(10);
 		
 		JButton btnBuscar = new JButton("BUSCAR");
+		btnBuscar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String nombre = textFieldBuscar.getText();
+		        PERSONA p = manejo.buscar(nombre);
+
+		        if (p != null) {
+		            JOptionPane.showMessageDialog(null, p.toString());
+		        } else {
+		            JOptionPane.showMessageDialog(null, "NO ENCONTRADO");
+		        }
+			}
+		});
 		btnBuscar.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnBuscar.setBounds(466, 40, 112, 20);
 		contentPane.add(btnBuscar);
