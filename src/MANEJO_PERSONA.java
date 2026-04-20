@@ -101,9 +101,20 @@ public class MANEJO_PERSONA {
     }
     
     
+    public PERSONA buscar(String nombre) {
+        PERSONA aux = primero;
+
+        while (aux != null) {
+            if (aux.getNombre().equalsIgnoreCase(nombre)) {
+                return aux;
+            }
+            aux = aux.getSiguiente();
+        }
+
+        return null;
+    }
     
-    
-    
+     
     
     
     
