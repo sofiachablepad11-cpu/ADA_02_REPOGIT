@@ -37,7 +37,6 @@ public class GUI_GLUCOSA extends JFrame {
 	
     private DefaultListModel modelo = new DefaultListModel();
 	private MANEJO_PERSONA manejo = new MANEJO_PERSONA();
-	private JTextField textBuscarNombre;
 
 	/**
 	 * Launch the application.
@@ -178,16 +177,6 @@ public class GUI_GLUCOSA extends JFrame {
 		list.setForeground(new Color(0, 0, 0));
 		list.setBounds(266, 107, 312, 174);
 		contentPane.add(list);
-		
-		textBuscarNombre = new JTextField();
-		textBuscarNombre.setBounds(10, 41, 474, 18);
-		contentPane.add(textBuscarNombre);
-		textBuscarNombre.setColumns(10);
-		
-		JButton btnBuscar = new JButton("BUSCAR");
-		btnBuscar.setFont(new Font("Tahoma", Font.BOLD, 10));
-		btnBuscar.setBounds(494, 40, 84, 20);
-		contentPane.add(btnBuscar);
 
 	}
 }
