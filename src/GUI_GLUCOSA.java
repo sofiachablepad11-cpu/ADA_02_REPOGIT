@@ -188,7 +188,7 @@ public class GUI_GLUCOSA extends JFrame {
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String nombre = textFieldBuscar.getText();
-		        PERSONA p = manejo.buscar(nombre);
+		        PERSONA p = manejo.buscar(nombre); 
 
 		        if (p != null) {
 		            JOptionPane.showMessageDialog(null, p.toString());
